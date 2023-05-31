@@ -15,9 +15,10 @@ try:
     with open("summary.json", "w") as outfile:
         json.dump(r_data, outfile)  
 
-    severity_details = json.dumps(r_data.get("severity"))
-    severity = pd.read_json(severity_details)
-    print(severity)
+    severity_details = r_data.get("severity")
+    jobj = json.dumps(severity_details)
+    severity = pd.read_json(jobj)
+    print(severity_details)
 
     
     header = severity_details[0].keys()

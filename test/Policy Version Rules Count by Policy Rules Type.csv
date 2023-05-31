@@ -1,0 +1,6 @@
+﻿Policy Rules Type,Policy Version Rules Count
+CWE,108
+MAX_SEVERITY,55
+MIN_SCORE,51
+SECURITY_STANDARD,27
+BLACKLIST,10

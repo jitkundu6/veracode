@@ -1,0 +1,7 @@
+category,level
+[],5
+[],4
+"[{'categoryname': 'Cryptographic Issues', 'severity': 'MEDIUM', 'count': 20}, {'categoryname': 'Credentials Management', 'severity': 'MEDIUM', 'count': 7}, {'categoryname': 'Untrusted Search Path', 'severity': 'MEDIUM', 'count': 3}, {'categoryname': 'Server Configuration', 'severity': 'MEDIUM', 'count': 1}, {'categoryname': 'Information Leakage', 'severity': 'MEDIUM', 'count': 1}]",3
+"[{'categoryname': 'Insufficient Input Validation', 'severity': 'LOW', 'count': 99}, {'categoryname': 'Cryptographic Issues', 'severity': 'LOW', 'count': 1}]",2
+[],1
+"[{'categoryname': 'Code Quality', 'severity': 'INFORMATIONAL', 'count': 27}]",0

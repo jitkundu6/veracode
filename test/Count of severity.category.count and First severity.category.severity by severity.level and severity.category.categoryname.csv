@@ -1,0 +1,12 @@
+﻿severity.level,Count of severity.category.count,First severity.category.severity,severity.category.categoryname
+0,1,INFORMATIONAL,Code Quality
+2,1,LOW,Cryptographic Issues
+2,1,LOW,Information Leakage
+2,1,LOW,Insufficient Input Validation
+3,1,MEDIUM,Credentials Management
+3,1,MEDIUM,CRLF Injection
+3,1,MEDIUM,Cryptographic Issues
+3,1,MEDIUM,Directory Traversal
+3,1,MEDIUM,Information Leakage
+3,1,MEDIUM,Server Configuration
+3,1,MEDIUM,Untrusted Search Path

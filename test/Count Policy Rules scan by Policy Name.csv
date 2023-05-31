@@ -1,0 +1,18 @@
+﻿Policy Name,Count Policy Rules scan
+Veracode Recommended Mobile Policy,108
+Veracode Recommended Very High + SCA,24
+Veracode Recommended High + SCA,16
+Veracode Recommended Medium + SCA,16
+"Auto-Update PCI (Latest version of OWASP, CWE Top 25, and CERT)",12
+"PCI 3.2.1 (OWASP 2017, CWE 2020, CERT 2018)",12
+"PCI 3.2.1 (OWASP 2017, CWE/SANS 2011, CERT 2018)",12
+Veracode Recommended Very High,12
+Veracode Recommended High,6
+Veracode Recommended Low,6
+Veracode Recommended Medium,6
+Veracode Transitional High,3
+Veracode Transitional Low,3
+Veracode Transitional Medium,3
+Veracode Transitional Very High,3
+Veracode Transitional Very Low,3
+Veracode Recommended Very Low,1

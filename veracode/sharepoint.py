@@ -1,0 +1,61 @@
+import requests
+
+# SharePoint site URL
+sharepoint_url = "https://your-sharepoint-site-url.com"
+
+# SharePoint document library URL
+document_library_url = f"{sharepoint_url}/sites/your-site-name/Shared Documents"
+
+# Local file path
+# local_file_path = "/path/to/local/file.txt"
+local_file_path = "sca.json"
+
+# SharePoint folder name where the file will be uploaded
+target_folder_name = "Target Folder"
+
+# SharePoint folder URL
+# target_folder_url = f"{document_library_url}/{target_folder_name}"
+target_folder_url = "https://propelinc-my.sharepoint.com/personal/subhajit_propelinc_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fsubhajit%5Fpropelinc%5Fcom%2FDocuments%2FTest&view=0"
+
+# SharePoint upload URL
+# upload_url = f"{target_folder_url}/{local_file_path.split('/')[-1]}"
+upload_url = "https://propelinc-my.sharepoint.com/personal/subhajit_propelinc_com/"
+
+# # SharePoint authentication credentials (if required)
+# username = "subhajit@propelinc.com"
+# password = "SK@acies"
+
+# # SharePoint authentication headers (if required)
+# auth = None
+# if username and password:
+#     auth = requests.auth.HTTPBasicAuth(username, password)
+
+# # Upload the file
+# with open(local_file_path, "rb") as file:
+#     headers = {"Content-Type": "application/octet-stream"}
+#     # response = requests.put(upload_url, data=file, headers=headers, auth=auth)
+#     response = requests.get(upload_url)
+
+# SharePoint access token
+# access_token = "your-access-token"
+access_token = "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkExMjhDQkMtSFMyNTYiLCJ4NXQiOiJzRl9qb2Y2TjRoS2ZIMGV6MVBhOHcxb2JucEkiLCJ6aXAiOiJERUYifQ.IZWidvXkPEzHyuChtgTbX83gICzTWwcgxb3NfiTyIYNX4YYQCQq03IbEYfYA9QVbdg9gKPfwpjo2EYQKBPYSQxp-J8q3TmP3JcQf6wAbzV4L46w3pXnrxs4IUoVlwFcNzp5Y-xEdEZWhESLxZpTBcOTYyUaQUPF0r0-1DZ9N7cCfNFi-4I7-HC-dS0KitsSC5nkQAG1DiJIs8TfnEWOmL1R2sOJjT38tTUmLzssSVC3jmI1LJQEPo3qHT55-X_XLuwHjqDnfpJOITFUPbZFdN22iLuVJnyrkfPx18ig2wHGDRXNMtZ6Uvnjpx-uFlAOGQLF0CQK02Qx5SZi8Ih_KpQ.U8IfphbaJZxF1Gnz9Sb-VQ.lAL1UAmtGhhlLCT7HvUlpcVwCs-wVElPaNzaKzCsvwee8ZMPOEotIWZUYJKHgbx3IU__BkvwNemMs7VkMOk8SiFVpeB_6_3ioI3ilM6tRB0v-MDSYmk8V4zXB9e8ocqVyOO7HU4srMJon9N7D8R-kj1-M6YtdFpWNbDBGXfl5GgtwkFNhP79r5FmmHWFY36Nxy3zh3_zpo-ZLeAfYoyq0RFKuTp0CFegeryjwb54nPCdbJtyy8SijUbPv0U26SspDFo6To5ZJeo9EtEYW28SuQ3A7m7qvfQ9Vr22d8Pw49MqkGMD0osCli2HfDtSwmML-0lUXgQ1PP9xFluk512OpSIlf1S1aWZL2o9hj9A07hqGyomhNLPSxNFoZXAgmtHIn3voXiGhr3fx3N5ztl1OileCph6Cs2uzDBzMShB-w2kD_9x4XVShY0ozcfexYmKsKsadniXjrqw0agTeXvd9ou7gJ1Cci3VXV6cPNiZLpe2I1NP4XSOEa5YRa9V1hpRRaY03NdE7fgruTWsOoaQTs_FvoaRAKqsBDgi2Ht9dXu7NixqhBla_xOJCRLOGGuwEFb53jrMfoHNYgZar1SnvedvwxOk84pY4OKQ781-GwFCAvNgAnn6wbvFk-LB-cwCtg6zuvDh-SkE6KNAqjKp9ntgx7xhTKfgK3o0Hozpi_kphgII9FdVDciycwxEpPUL0ibKTVTrB-TaQhehwJKYsvIFqDAoiF73nlQtKDnBEbfvzKKYqQ3JueeKbz_uOKMrtVdR5koBfgPYbiKaKx3pVgiqgnQKtjYgvNQjz05kBGctYfTauoJIFGTGZhLN2ecD_GtGpJxXmgNLvXFuX35wB1QKxPdpWjtwW3V7P5FCUnqGQnzvfe9xhtQG3wcAKaPuJQly2Atd_-ycmIdpwQ5U2xTHk7tpyT-H8Qwm9TZrse3zIQlmLGn9b6rsEvbc4LEsaAuL1F1wKW_omqBht9B9kUJTaoZ24cetscCFbLvPQJWsW2C0V8GRKUlNg1J0xvANeDXBU67UtKN4c2lyCT8sdfWut4lJKOH9-SHKnEuMzbFlmAkzeL01SqDfqpWM98f4ElAhR60C0tGxrUJv-n1jpzjQ5k0qJDWgxBFNYK6fjcEVKA5C3dTpTC_QY1gK99HSUyaOCIJg5hvSwcE7mQfL1lCciEHhDzE8jZprP_7Oz-I_6QtqUolZhxcOwW3p16DLCkZ3U9l-DpsUy4YQY4Rxna32XULlTBsXkFhm8jozaQKS4Xnq4A2atGU5k7k99Vtv0Nw-A4XAqyHImTWGG9YKuvj4ozn2qNZo0q8DBd4WJ_JewjW6ibIdmMC8dhS7yEUjJfybrXXjua7Rd1plHQvs2nb6mq6vfLDb45x8exniETBShvqRF3pbaNc6DnG2QAko7I9wECBN91wmBK857Kt71fDfmM-wp_2wzexq9pTXNaSfYNFUZtrzhS6Hi93ytgbspr41C_C7DoIADSl3YWV_8JL2pncaWL8cumUESfpPXSEnT6Zpg-xGdfIH80Y31oh1txxkyqizF13Y86_XugkClvwsnzAjbVvsVRcQ7wJRoMIMIqakQDh_RZ-IoROh1TAGtJD0sau5FOIc7qzdSM9MOtQ.HpcYAtZgI7V01Uug1Dw3JA"
+
+access_token = "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkExMjhDQkMtSFMyNTYiLCJ4NXQiOiJzRl9qb2Y2TjRoS2ZIMGV6MVBhOHcxb2JucEkiLCJ6aXAiOiJERUYifQ.IZWidvXkPEzHyuChtgTbX83gICzTWwcgxb3NfiTyIYNX4YYQCQq03IbEYfYA9QVbdg9gKPfwpjo2EYQKBPYSQxp-J8q3TmP3JcQf6wAbzV4L46w3pXnrxs4IUoVlwFcNzp5Y-xEdEZWhESLxZpTBcOTYyUaQUPF0r0-1DZ9N7cCfNFi-4I7-HC-dS0KitsSC5nkQAG1DiJIs8TfnEWOmL1R2sOJjT38tTUmLzssSVC3jmI1LJQEPo3qHT55-X_XLuwHjqDnfpJOITFUPbZFdN22iLuVJnyrkfPx18ig2wHGDRXNMtZ6Uvnjpx-uFlAOGQLF0CQK02Qx5SZi8Ih_KpQ.U8IfphbaJZxF1Gnz9Sb-VQ.lAL1UAmtGhhlLCT7HvUlpcVwCs-wVElPaNzaKzCsvwee8ZMPOEotIWZUYJKHgbx3IU__BkvwNemMs7VkMOk8SiFVpeB_6_3ioI3ilM6tRB0v-MDSYmk8V4zXB9e8ocqVyOO7HU4srMJon9N7D8R-kj1-M6YtdFpWNbDBGXfl5GgtwkFNhP79r5FmmHWFY36Nxy3zh3_zpo-ZLeAfYoyq0RFKuTp0CFegeryjwb54nPCdbJtyy8SijUbPv0U26SspDFo6To5ZJeo9EtEYW28SuQ3A7m7qvfQ9Vr22d8Pw49MqkGMD0osCli2HfDtSwmML-0lUXgQ1PP9xFluk512OpSIlf1S1aWZL2o9hj9A07hqGyomhNLPSxNFoZXAgmtHIn3voXiGhr3fx3N5ztl1OileCph6Cs2uzDBzMShB-w2kD_9x4XVShY0ozcfexYmKsKsadniXjrqw0agTeXvd9ou7gJ1Cci3VXV6cPNiZLpe2I1NP4XSOEa5YRa9V1hpRRaY03NdE7fgruTWsOoaQTs_FvoaRAKqsBDgi2Ht9dXu7NixqhBla_xOJCRLOGGuwEFb53jrMfoHNYgZar1SnvedvwxOk84pY4OKQ781-GwFCAvNgAnn6wbvFk-LB-cwCtg6zuvDh-SkE6KNAqjKp9ntgx7xhTKfgK3o0Hozpi_kphgII9FdVDciycwxEpPUL0ibKTVTrB-TaQhehwJKYsvIFqDAoiF73nlQtKDnBEbfvzKKYqQ3JueeKbz_uOKMrtVdR5koBfgPYbiKaKx3pVgiqgnQKtjYgvNQjz05kBGctYfTauoJIFGTGZhLN2ecD_GtGpJxXmgNLvXFuX35wB1QKxPdpWjtwW3V7P5FCUnqGQnzvfe9xhtQG3wcAKaPuJQly2Atd_-ycmIdpwQ5U2xTHk7tpyT-H8Qwm9TZrse3zIQlmLGn9b6rsEvbc4LEsaAuL1F1wKW_omqBht9B9kUJTaoZ24cetscCFbLvPQJWsW2C0V8GRKUlNg1J0xvANeDXBU67UtKN4c2lyCT8sdfWut4lJKOH9-SHKnEuMzbFlmAkzeL01SqDfqpWM98f4ElAhR60C0tGxrUJv-n1jpzjQ5k0qJDWgxBFNYK6fjcEVKA5C3dTpTC_QY1gK99HSUyaOCIJg5hvSwcE7mQfL1lCciEHhDzE8jZprP_7Oz-I_6QtqUolZhxcOwW3p16DLCkZ3U9l-DpsUy4YQY4Rxna32XULlTBsXkFhm8jozaQKS4Xnq4A2atGU5k7k99Vtv0Nw-A4XAqyHImTWGG9YKuvj4ozn2qNZo0q8DBd4WJ_JewjW6ibIdmMC8dhS7yEUjJfybrXXjua7Rd1plHQvs2nb6mq6vfLDb45x8exniETBShvqRF3pbaNc6DnG2QAko7I9wECBN91wmBK857Kt71fDfmM-wp_2wzexq9pTXNaSfYNFUZtrzhS6Hi93ytgbspr41C_C7DoIADSl3YWV_8JL2pncaWL8cumUESfpPXSEnT6Zpg-xGdfIH80Y31oh1txxkyqizF13Y86_XugkClvwsnzAjbVvsVRcQ7wJRoMIMIqakQDh_RZ-IoROh1TAGtJD0sau5FOIc7qzdSM9MOtQ.HpcYAtZgI7V01Uug1Dw3JA"
+# SharePoint authentication headers
+headers = {
+    "Authorization": f"Bearer {access_token}",
+    "Content-Type": "application/octet-stream"
+}
+
+# Upload the file
+with open(local_file_path, "rb") as file:
+    response = requests.get(upload_url)
+    # response = requests.put(upload_url, data=file, headers=headers)
+
+
+# Check the response status
+if response.status_code == 200:
+    print("File uploaded successfully.")
+else:
+    print(f"File upload failed with status code: {response.status_code}")
+    print(f"Error message: {response.text}")
